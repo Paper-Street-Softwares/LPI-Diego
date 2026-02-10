@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.ssfadv.com.br/sitemap.xml
