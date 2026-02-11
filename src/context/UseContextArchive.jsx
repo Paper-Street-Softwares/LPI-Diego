@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react'
 const ColorModeContext = createContext(null)
 
 export function ColorModeProvider({ children }) {
-  const [colorMode, setColorMode] = useState('dark') // defaultDark, defaultLight, light, dark
+  const [colorMode, setColorMode] = useState('defaultDark') // defaultDark, defaultLight, light, dark
 
   const [whatsAppColor] = useState(false) // ativa cor do WhatsApp
   const [showGlobalButton] = useState(false) // ativa as os botões e caixa de alerta
@@ -35,17 +35,16 @@ export function ButtonsLps() {
 }
 
 export const whatsAppThemes = {
-  light: 'bg-wppDark text-corTitulosPreto border-green-600/30',
+  light: 'bg-wppDark text-corTitulosBranca border-green-600/30',
   dark: 'bg-wppLight text-corTitulosBranca border-green-600/30',
-  defaultDark: 'bg-wppDark text-corTitulosPreto border-green-600/30',
-  defaultLight: 'bg-wppDark text-corTitulosPreto border-green-600/30',
+  defaultDark: 'bg-wppDark text-corTitulosBranca border-green-600/30',
+  defaultLight: 'bg-wppDark text-corTitulosBranca border-green-600/30',
 }
 
 export const defaultButtonThemes = {
   light: 'bg-primaryDark text-corTitulosBranca border border-primaryDark/20 ',
   dark: 'bg-primaryLight text-corTitulosPreto',
-  defaultDark:
-    'bg-primaryDark text-corTitulosBranca border border-primaryDark/20 ',
+  defaultDark: 'bg-primaryLight text-corTitulosPreto',
   defaultLight:
     'bg-primaryDark text-corTitulosBranca border border-primaryDark/20 ',
 }

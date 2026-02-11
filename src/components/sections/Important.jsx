@@ -6,6 +6,7 @@ import CardsImportants from '../cards/CardsImportants'
 import content from '../../content/content'
 import ButtonReflexo from '../../components/interactives/ButtonReflexo'
 import MotionDivDownUp from '../animation/MotionDivDownToUp'
+import { defaultButtonThemes } from '../../context/UseContextArchive'
 
 function Important({ colorMode }) {
   const listCards = Object.values(content.texts.important.cards)
@@ -71,6 +72,11 @@ function Important({ colorMode }) {
             icon={content.texts.svgs.wpp}
             link={content.texts.links.ctaWhatsapp}
             className={`clickevent`}
+            bgClass={
+              colorMode === 'defaultDark' || colorMode === 'light'
+                ? defaultButtonThemes.light
+                : defaultButtonThemes.dark
+            }
           />
         </MotionDivDownUp>
       </SectionWrapper>

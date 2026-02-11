@@ -9,6 +9,7 @@ import ButtonAlert from '../interactives/ButtonAlert'
 import { Phone } from 'lucide-react'
 import MotionDivDownToUp from '../animation/MotionDivDownToUp'
 import { ButtonsLps } from '../../context/UseContextArchive'
+import { defaultButtonThemes } from '../../context/UseContextArchive'
 
 function StepsNovoTemplate({ colorMode }) {
   const steps = Object.values(content.texts.steps.cards)
@@ -120,7 +121,11 @@ function StepsNovoTemplate({ colorMode }) {
                       }
                       link={content.texts.links.ctaWhatsapp}
                       label={content.texts.steps.ctaButtonText}
-                      colorMode={colorMode}
+                      bgClass={
+                        colorMode === 'defaultDark' || colorMode === 'light'
+                          ? defaultButtonThemes.light
+                          : defaultButtonThemes.dark
+                      }
                       className={`clickevent`}
                     />
                     <ButtonReflexo
@@ -197,7 +202,11 @@ function StepsNovoTemplate({ colorMode }) {
                       }
                       link={content.texts.links.ctaWhatsapp}
                       label={content.texts.steps.ctaButtonText}
-                      colorMode={colorMode}
+                      bgClass={
+                        colorMode === 'defaultDark' || colorMode === 'light'
+                          ? defaultButtonThemes.light
+                          : defaultButtonThemes.dark
+                      }
                       className={`clickevent`}
                     />
                     <ButtonReflexo

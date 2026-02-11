@@ -10,6 +10,7 @@ import { Button } from '../interactives/ButtonNovoTemplate'
 import SectionWrapper from '../sectionElements/SectionWrapper'
 import MotionDivDownToUp from '../animation/MotionDivDownToUp'
 import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
+import { defaultButtonThemes } from '../../context/UseContextArchive'
 
 function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
   const [visible, setVisible] = useState(false)
@@ -168,7 +169,11 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                         }
                         link={content.texts.links.ctaWhatsapp}
                         label={content.texts.about.ctaButtonText}
-                        colorMode={colorMode}
+                        bgClass={
+                          colorMode === 'defaultDark' || colorMode === 'light'
+                            ? defaultButtonThemes.light
+                            : defaultButtonThemes.dark
+                        }
                         className={`clickevent`}
                       />
                       <ButtonReflexo

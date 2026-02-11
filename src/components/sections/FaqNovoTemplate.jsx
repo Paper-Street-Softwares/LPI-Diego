@@ -11,9 +11,12 @@ import content from '../../content/content'
 import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
 import ButtonReflexo from '../../components/interactives/ButtonReflexo'
 import MotionDivDownToUp from '../animation/MotionDivDownToUp'
+import { ButtonsLps } from '../../context/UseContextArchive'
+import { defaultButtonThemes } from '../../context/UseContextArchive'
 
 function FaqNovoTemplate({ colorMode }) {
   const faqs = Object.values(content.texts.faq.questions)
+  const { showGlobalButtonsLps } = ButtonsLps()
 
   // Classes dinâmicas conforme colorMode
   let text, textOpacity, hoverText, backgroundMode
@@ -88,25 +91,25 @@ function FaqNovoTemplate({ colorMode }) {
               </Accordion>
             </MotionDivDownToUp>
           </div>
-
-          <div
-            className={`flex justify-center mx-auto mt-12 scale-100 hover:scale-90 duration-500 w-fit transition-all cursor-pointer ${textOpacity}`}
-          >
-            <a
-              href={content.texts.links.ctaWhatsapp}
-              className="clickevent w-fit"
-              target="_blank"
-            >
-              Clique aqui caso tenha mais dúvidas
-            </a>
-            {/* <ButtonReflexo
-              icon={content.texts.svgs.wpp}
-              link={content.texts.links.ctaWhatsapp}
-              label={content.texts.hero.ctaButtonText}
-              colorMode={colorMode}
-              className="clickevent my-0"
-            /> */}
-          </div>
+          {showGlobalButtonsLps && (
+            <MotionDivDownToUp>
+              <div
+                className={`flex justify-center mx-auto mt-12 w-fit transition-all cursor-pointer ${textOpacity}`}
+              >
+                <ButtonReflexo
+                  icon={content.texts.svgs.wpp}
+                  link={content.texts.links.ctaWhatsapp}
+                  label={content.texts.faq.paragraph}
+                  bgClass={
+                    colorMode === 'defaultDark' || colorMode === 'light'
+                      ? defaultButtonThemes.light
+                      : defaultButtonThemes.dark
+                  }
+                  className="clickevent my-0"
+                />
+              </div>
+            </MotionDivDownToUp>
+          )}
         </section>
       </SectionWrapper>
     </SectionArea>

@@ -49,7 +49,7 @@ function HeroTemplateNovo({
       textDestaque = 'text-primaryDark'
       bgMinitag = 'bg-transparent border-primaryDark text-primaryDark'
       // textObs = 'text-green-500'
-      image = ' border-[8px] border-white'
+      image = ' border-[8px]'
       bgAlertHero = 'bg-white'
       borderColor = 'bg-white'
       break
@@ -61,22 +61,22 @@ function HeroTemplateNovo({
       textDestaque = 'text-primaryLight'
       bgMinitag = 'bg-transparent border-primaryLight text-primaryLight'
       // textObs = 'text-green-500'
-      image = ' border-[8px] border-borderImage'
+      image = ' border-[8px]'
       bgAlertHero = 'bg-black text-white/60'
       borderColor = 'border-borderImage'
 
       break
     case 'defaultDark':
-      backgroundMode = 'bg-transparent'
-      bgFaixaHero = 'bg-[color-mix(in_srgb,var(--primaryDark),black_30%)]'
+      backgroundMode = 'bg-[color-mix(in_srgb,var(--primaryDark),black_30%)]'
+      bgFaixaHero = 'bg-primaryDark'
       text = 'text-corTitulosBranca'
       textOpacity = 'text-corOutrosTextosBranca'
       textDestaque = 'text-primaryLight'
       bgMinitag = 'bg-transparent border-primaryLight text-primaryLight'
       // textObs = 'text-green-500'
-      image = ' border-[8px] border-primaryLight'
+      image = ' border-[8px]'
       bgAlertHero = 'bg-black text-white/60'
-      borderColor = 'border-primaryLight'
+      borderColor = 'border-primaryDark'
 
       break
 
@@ -88,7 +88,7 @@ function HeroTemplateNovo({
       textDestaque = 'text-primaryDark'
       bgMinitag = 'bg-transparent border-primaryDark text-primaryDark'
       // textObs = 'text-green-500'
-      image = ' border-[8px] border-white'
+      image = ' border-[8px]'
       bgAlertHero = 'bg-white'
       borderColor = 'bg-white'
   }
@@ -134,7 +134,7 @@ function HeroTemplateNovo({
         />
 
         <SectionWrapper>
-          <div className="container relative z-10 grid lg:grid-cols-2 gap-4 phone2:gap-6 lg:gap-20 items-center">
+          <div className="relative z-10 grid lg:grid-cols-2 gap-4 phone2:gap-6 lg:gap-20 items-center w-full">
             {/* Content */}
 
             <div
@@ -221,8 +221,8 @@ function HeroTemplateNovo({
                     className={`font-secondFont font-light flex gap-2 items-center ${textOpacity}`}
                   >
                     {/* <span>
-                    <Check />
-                  </span>{' '} */}
+                      <Check />
+                    </span>{' '} */}
                     {content.texts.hero.obsHero.text}
                   </span>
                   {obsTwo && (
@@ -230,7 +230,7 @@ function HeroTemplateNovo({
                       className={`font-secondFont font-light flex gap-2 items-center ${textOpacity}`}
                     >
                       <span>
-                        <FileText />
+                        <Check />
                       </span>{' '}
                       {content.texts.hero.obsHero.textTwo}
                     </span>
