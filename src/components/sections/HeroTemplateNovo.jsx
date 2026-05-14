@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react'
-import { Button } from '../interactives/ButtonNovoTemplate'
-import { motion } from 'framer-motion'
+import React, { useRef, useState } from "react";
+import { Button } from "../interactives/ButtonNovoTemplate";
+import { motion } from "framer-motion";
 import {
   MapPin,
   MessageCircle,
@@ -17,13 +17,13 @@ import {
   Scale,
   BriefcaseMedical,
   BriefcaseBusiness,
-} from 'lucide-react'
-import content from '../../content/content'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import ButtonAlert from '../interactives/ButtonAlert'
-import { useColorMode } from '../../context/UseContextArchive'
+} from "lucide-react";
+import content from "../../content/content";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import ButtonAlert from "../interactives/ButtonAlert";
+import { useColorMode } from "../../context/UseContextArchive";
 
 function HeroTemplateNovo({
   colorMode,
@@ -41,59 +41,59 @@ function HeroTemplateNovo({
   obsTwo,
 }) {
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-transparent'
-      bgFaixaHero = 'bg-terciary'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      textDestaque = 'text-primaryDark'
-      bgMinitag = 'bg-transparent border-primaryDark text-primaryDark'
+    case "light":
+      backgroundMode = "bg-transparent";
+      bgFaixaHero = "bg-terciary";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryDark";
+      bgMinitag = "bg-transparent border-primaryDark text-primaryDark";
       // textObs = 'text-green-500'
-      image = ' border-[8px]'
-      bgAlertHero = 'bg-white'
-      borderColor = 'bg-white'
-      break
-    case 'dark':
-      backgroundMode = 'bg-transparent'
-      bgFaixaHero = 'bg-white/5'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryLight'
-      bgMinitag = 'bg-transparent border-primaryLight text-primaryLight'
+      image = " border-[8px]";
+      bgAlertHero = "bg-white";
+      borderColor = "bg-white";
+      break;
+    case "dark":
+      backgroundMode = "bg-transparent";
+      bgFaixaHero = "bg-white/5";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryLight";
+      bgMinitag = "bg-transparent border-primaryLight text-primaryLight";
       // textObs = 'text-green-500'
-      image = ' border-[8px]'
-      bgAlertHero = 'bg-black text-white/60'
-      borderColor = 'border-borderImage'
+      image = " border-[8px]";
+      bgAlertHero = "bg-black text-white/60";
+      borderColor = "border-borderImage";
 
-      break
-    case 'defaultDark':
-      backgroundMode = 'bg-[color-mix(in_srgb,var(--primaryDark),black_30%)]'
-      bgFaixaHero = 'bg-primaryDark'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryLight'
-      bgMinitag = 'bg-transparent border-primaryLight text-primaryLight'
+      break;
+    case "defaultDark":
+      backgroundMode = "bg-[color-mix(in_srgb,var(--primaryDark),black_30%)]";
+      bgFaixaHero = "bg-primaryDark";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryLight";
+      bgMinitag = "bg-transparent border-primaryLight text-primaryLight";
       // textObs = 'text-green-500'
-      image = ' border-[8px]'
-      bgAlertHero = 'bg-black text-white/60'
-      borderColor = 'border-primaryDark'
+      image = " border-[8px]";
+      bgAlertHero = "bg-black text-white/60";
+      borderColor = "border-primaryDark";
 
-      break
+      break;
 
-    case 'defaultLight':
-      backgroundMode = 'bg-transparent'
-      bgFaixaHero = 'bg-terciary'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      textDestaque = 'text-primaryDark'
-      bgMinitag = 'bg-transparent border-primaryDark text-primaryDark'
+    case "defaultLight":
+      backgroundMode = "bg-transparent";
+      bgFaixaHero = "bg-terciary";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryDark";
+      bgMinitag = "bg-transparent border-primaryDark text-primaryDark";
       // textObs = 'text-green-500'
-      image = ' border-[8px]'
-      bgAlertHero = 'bg-white'
-      borderColor = 'bg-white'
+      image = " border-[8px]";
+      bgAlertHero = "bg-white";
+      borderColor = "bg-white";
   }
 
-  const { showGlobalButton } = useColorMode()
+  const { showGlobalButton } = useColorMode();
 
   // const topicsCard = Object.values({
   //   card1: {
@@ -134,14 +134,14 @@ function HeroTemplateNovo({
         />
 
         <SectionWrapper>
-          <div className="relative z-10 grid lg:grid-cols-2 gap-4 phone2:gap-6 lg:gap-20 items-center w-full">
+          <div className="relative z-10 grid items-center w-full gap-4 lg:grid-cols-2 phone2:gap-6 lg:gap-20">
             {/* Content */}
 
             <div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="space-y-8 order-2 lg:order-1 flex flex-col items-start desktop1:items-start"
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex flex-col items-start order-2 space-y-8 lg:order-1 desktop1:items-start"
             >
               <div
                 className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border shadow-sm text-[8px] phone2:text-xs font-secondFont font-bold tracking-wide uppercase ${bgMinitag}`}
@@ -152,12 +152,12 @@ function HeroTemplateNovo({
                 {content.texts.hero.miniTag}
               </div>
               <h1
-                className={` desktop1:text-start text-[31px] phone2:text-4xl md:text-5xl lg:text-7xl font-medium leading-[1.1] ${text} `}
+                className={` desktop1:text-start text-[26px] phone2:text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] ${text} `}
               >
-                {content.texts.hero.FirstPart}{' '}
+                {content.texts.hero.FirstPart}{" "}
                 <span className={`${textDestaque}`}>
                   {content.texts.hero.Destaque}
-                </span>{' '}
+                </span>{" "}
                 {content.texts.hero.SecondPart}
               </h1>
 
@@ -211,10 +211,10 @@ function HeroTemplateNovo({
                 } w-full`}
               /> */}
               {obs && (
-                <div className="flex justify-start items-center gap-3 text-sm text-mutedForeground w-full">
+                <div className="flex items-center justify-start w-full gap-3 text-sm text-mutedForeground">
                   <div className="relative flex ">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-600"></span>
+                    <span className="absolute inline-flex w-full h-full bg-green-600 rounded-full opacity-75 animate-ping"></span>
+                    <span className="relative inline-flex w-3 h-3 bg-green-600 rounded-full"></span>
                   </div>
                   {/* ⚠️ */}
                   <span
@@ -231,7 +231,7 @@ function HeroTemplateNovo({
                     >
                       <span>
                         <Check />
-                      </span>{' '}
+                      </span>{" "}
                       {content.texts.hero.obsHero.textTwo}
                     </span>
                   )}
@@ -243,7 +243,7 @@ function HeroTemplateNovo({
             <div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="relative order-1 lg:order-2"
             >
               <div
@@ -252,7 +252,7 @@ function HeroTemplateNovo({
                 <img
                   src={content.texts.hero.heroDefaulMobiletImg}
                   alt={content.texts.hero.alt}
-                  className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700 desktop1:hidden"
+                  className="object-cover w-full h-full transition-transform duration-700 scale-105 hover:scale-100 desktop1:hidden"
                   width={621}
                   height={350}
                   fetchPriority="high"
@@ -261,13 +261,13 @@ function HeroTemplateNovo({
                 <img
                   src={content.texts.hero.heroDefaultImage}
                   alt={content.texts.hero.alt}
-                  className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700 hidden desktop1:flex"
+                  className="hidden object-cover w-full h-full transition-transform duration-700 scale-105 hover:scale-100 desktop1:flex"
                   width={621}
                   height={826}
                   fetchPriority="high"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
                 {/* Floating Card */}
                 {/* {showGlobalButton && (
@@ -295,7 +295,7 @@ function HeroTemplateNovo({
                         <ButtonAlert
                           padding="p-2 phone3:p-4"
                           icon={
-                            <Phone className="w-4 h-4 tablet1:w-6 tablet1:h-6 text-white" />
+                            <Phone className="w-4 h-4 text-white tablet1:w-6 tablet1:h-6" />
                           }
                           link={`tel:${content.texts.infos.phone}`}
                           className="bg-red-700"
@@ -310,7 +310,7 @@ function HeroTemplateNovo({
         </SectionWrapper>
       </section>
     </SectionArea>
-  )
+  );
 }
 
-export default HeroTemplateNovo
+export default HeroTemplateNovo;

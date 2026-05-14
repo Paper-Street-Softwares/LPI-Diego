@@ -1,16 +1,16 @@
-import logo from '../assets/imgs/logo/logo.webp'
-import logoDesktop from '../assets/imgs/logo/logoDesktop.webp'
-import heroDefaultImg from '../assets/imgs/hero/lawHero.webp'
-import heroDefaultMobileImg from '../assets/imgs/hero/lawHeroMobile.webp'
+import logo from "../assets/imgs/logo/logo.webp";
+import logoDesktop from "../assets/imgs/logo/logoDesktop.webp";
+import heroDefaultImg from "../assets/imgs/hero/lawHero.webp";
+import heroDefaultMobileImg from "../assets/imgs/hero/lawHeroMobile.webp";
 
-import imgFeatures from '../assets/imgs/features/imgServices.webp'
+import imgFeatures from "../assets/imgs/features/imgServices.webp";
 
-import aboutImg from '../assets/imgs/about/aboutImg.webp'
+import aboutImg from "../assets/imgs/about/aboutImg.webp";
 // import team1 from '../assets/imgs/team/team1.webp'
 // import team2 from '../assets/imgs/team/team2.webp'
-import aboutSocialImg from '../assets/imgs/about/aboutSocial.webp'
+import aboutSocialImg from "../assets/imgs/about/aboutSocial.webp";
 
-import imgSteps from '../assets/imgs/steps/imgSteps.webp'
+import imgSteps from "../assets/imgs/steps/imgSteps.webp";
 
 import {
   Baby,
@@ -28,31 +28,31 @@ import {
   Car,
   HandCoins,
   Check,
-} from 'lucide-react'
+} from "lucide-react";
 
-import { FileText } from 'lucide-react'
+import { FileText } from "lucide-react";
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
 export const infos = {
-  name: 'Funakawa Advogado',
-  email: 'contato', // Email desejado pelo cliente
-  emailSecundario: 'A_Definir', // Email desejado pelo cliente
-  domain: 'ssfadv.com.br', // Sem "www"
+  name: "Funakawa Advogado",
+  email: "contato", // Email desejado pelo cliente
+  emailSecundario: "A_Definir", // Email desejado pelo cliente
+  domain: "ssfadv.com.br", // Sem "www"
   phone: {
-    ddd: '11',
-    firstPart: '95087', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: '4527', // Apenas os 4 últimos números
+    ddd: "11",
+    firstPart: "95087", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "4527", // Apenas os 4 últimos números
   },
   phoneSecundario: {
-    ddd: 'A_Definir',
-    firstPart: 'A_Definir', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: 'A_Definir', // Apenas os 4 últimos números
+    ddd: "A_Definir",
+    firstPart: "A_Definir", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "A_Definir", // Apenas os 4 últimos números
   },
   phoneTerciario: {
-    ddd: 'A_Definir',
-    firstPart: 'A_Definir', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: 'A_Definir', // Apenas os 4 últimos números
+    ddd: "A_Definir",
+    firstPart: "A_Definir", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "A_Definir", // Apenas os 4 últimos números
   },
   endereco: (
     <div>
@@ -78,18 +78,18 @@ export const infos = {
     </div>
   ),
   obs: <span className="italic">A_Definir </span>,
-  instagramProfile: 'souzafunakawa', // Sem o @
-  facebookProfile: 'share/1GMy48ZeSb/',
-  linkeDinProfile: '',
-  x: '',
-  tiktokProfile: '',
+  instagramProfile: "souzafunakawa", // Sem o @
+  facebookProfile: "share/1GMy48ZeSb/",
+  linkeDinProfile: "",
+  x: "",
+  tiktokProfile: "",
 
   whatsappDefaultMessage:
-    'Olá! Vim através do site de vocês e gostaria de tirar umas dúvidas.',
+    "Olá! Vim através do site de vocês e gostaria de tirar umas dúvidas.",
   whatsChatDefaultMessage:
-    'Gostaria de falar conosco agora mesmo? Clque abaixo 👇',
-  slogan: '',
-}
+    "Gostaria de falar conosco agora mesmo? Clque abaixo 👇",
+  slogan: "",
+};
 
 const content = {
   texts: {
@@ -104,27 +104,32 @@ const content = {
         alt: `Logomarca ${infos.name}`,
       },
       menuItems: [
-        'Início',
-        'Serviços',
-        'Sobre',
-        'Perguntas',
+        "Início",
+        "Serviços",
+        "Sobre",
+        "Perguntas",
         // 'Blog',
         // 'Mapa',
       ],
-      menuId: ['home', 'feature', 'about', 'faq'],
-      ariaLabel: 'Botão de Contato',
-      ctaButtonText: 'Contato',
-      ctaButtonTextResponsive: 'Contato',
+      menuId: ["home", "feature", "about", "faq"],
+      ariaLabel: "Botão de Contato",
+      ctaButtonText: "Contato",
+      ctaButtonTextResponsive: "Contato",
     },
     hero: {
-      miniTag: 'ESCRITÓRIO DE ADVOCACIA',
-      FirstPart: <span>Análise jurídica clara para decisões </span>,
+      miniTag: "ESCRITÓRIO ESPECIALIZADO EM DIREITO DO CONSUMIDOR",
+      FirstPart: (
+        <span>
+          Se você teve seus direitos desrespeitados por empresas, bancos, lojas,
+          operadoras ou companhias aéreas,{" "}
+        </span>
+      ),
       Destaque: (
         <span className="relative italic font-light">
-          seguras
+          a legislação está ao seu lado.
           <span>
             <svg
-              className=" destaque absolute -bottom-2 left-0 w-full h-3 text-black hidden desktop1:flex"
+              className="absolute left-0 hidden w-full h-3 text-black destaque -bottom-2 desktop1:flex"
               viewBox="0 0 100 10"
               preserveAspectRatio="none"
             >
@@ -136,7 +141,7 @@ const content = {
               />
             </svg>
             <svg
-              className="destaque absolute -bottom-2 left-0 w-full h-3 text-black desktop1:hidden"
+              className="absolute left-0 w-full h-3 text-black destaque -bottom-2 desktop1:hidden"
               viewBox="0 0 100 10"
               preserveAspectRatio="none"
             >
@@ -153,87 +158,88 @@ const content = {
       SecondPart: <span></span>,
       subtitle: (
         <p>
-          Atendimento jurídico com orientação técnica, ética profissional e
-          acompanhamento responsável em cada demanda.
+          No Direito do Consumidor, cada caso começa com um problema real: uma
+          cobrança indevida, um nome negativado injustamente, um produto com
+          defeito ou um serviço que não foi prestado como deveria.
         </p>
       ),
       heroDefaultImage: heroDefaultImg, // img da pessoa mobile
       heroDefaulMobiletImg: heroDefaultMobileImg,
 
-      alt: 'Imagem ilustrativa da Seção Início',
+      alt: "Imagem ilustrativa da Seção Início",
       ctaButtonAriaLabel:
-        'Botão para chamada de ação para contato pelo whatsapp',
-      ctaButtonText: 'Solicitar atendimento',
-      ctaButtonTextSecondary: 'A_Definir',
+        "Botão para chamada de ação para contato pelo whatsapp",
+      ctaButtonText: "Solicitar atendimento",
+      ctaButtonTextSecondary: "A_Definir",
       obsHero: {
         icon: <LucideIdCard />,
         iconTwo: <LucideIdCard />,
-        text: 'Atendimento presencial e online para todo Brasil.',
-        textTwo: 'A_Definir',
+        text: "Atendimento presencial e online para todo Brasil.",
+        textTwo: "A_Definir",
       },
-      secondaryCta: 'Contato',
+      secondaryCta: "Contato",
       images: {
         static: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide1: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide2: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide3: {
           img: {},
-          alt: '',
+          alt: "",
         },
       },
     },
     important: {
-      miniTag: 'Atenção',
-      title: 'O que é importante saber sobre atendimento jurídico',
+      miniTag: "Atenção",
+      title: "O que é importante saber sobre atendimento jurídico",
       cards: {
         card1: {
-          title: 'Preciso mesmo de um advogado para esse tipo de problema?',
+          title: "Preciso mesmo de um advogado para esse tipo de problema?",
           paragraph:
-            'A orientação jurídica permite avaliar sua situação com mais segurança e entender quais caminhos são adequados ao seu caso. Para saber como isso se aplica à sua realidade, o ideal é conversar diretamente com um advogado.',
+            "A orientação jurídica permite avaliar sua situação com mais segurança e entender quais caminhos são adequados ao seu caso. Para saber como isso se aplica à sua realidade, o ideal é conversar diretamente com um advogado.",
         },
         card2: {
-          title: 'Meu caso é simples, vale a pena procurar um advogado?',
+          title: "Meu caso é simples, vale a pena procurar um advogado?",
           paragraph:
-            'Situações consideradas simples podem ter detalhes importantes que passam despercebidos. Uma análise profissional ajuda a esclarecer essas questões e indicar a melhor forma de condução. Entre em contato para uma avaliação inicial.',
+            "Situações consideradas simples podem ter detalhes importantes que passam despercebidos. Uma análise profissional ajuda a esclarecer essas questões e indicar a melhor forma de condução. Entre em contato para uma avaliação inicial.",
         },
         card3: {
-          title: 'Quanto tempo esse tipo de caso costuma levar?',
+          title: "Quanto tempo esse tipo de caso costuma levar?",
           paragraph:
-            'Os prazos variam conforme o tipo de demanda e os órgãos envolvidos. Cada caso possui particularidades que precisam ser analisadas individualmente, o que pode ser esclarecido em um atendimento direto.',
+            "Os prazos variam conforme o tipo de demanda e os órgãos envolvidos. Cada caso possui particularidades que precisam ser analisadas individualmente, o que pode ser esclarecido em um atendimento direto.",
         },
         card4: {
-          title: 'Vou precisar entrar com processo ou dá pra resolver antes?',
+          title: "Vou precisar entrar com processo ou dá pra resolver antes?",
           paragraph:
-            'Existem diferentes possibilidades de solução, que dependem da análise do caso concreto. A orientação jurídica permite avaliar alternativas e definir o caminho mais adequado. Para isso, é importante falar com um advogado.',
+            "Existem diferentes possibilidades de solução, que dependem da análise do caso concreto. A orientação jurídica permite avaliar alternativas e definir o caminho mais adequado. Para isso, é importante falar com um advogado.",
         },
       },
       fraseObs:
-        'Entre em contato conosco e lhe daremos todo o suporte necessário',
-      ctaButtonText: 'Falar conosco agora pelo WhatsApp',
+        "Entre em contato conosco e lhe daremos todo o suporte necessário",
+      ctaButtonText: "Falar conosco agora pelo WhatsApp",
     },
     features: {
-      miniTag: 'ÁREAS DE ATUAÇÃO',
+      miniTag: "ÁREAS DE ATUAÇÃO",
       FirstPart: <span>Atuação </span>,
       Destaque: <span className="italic font-light"> jurídica</span>,
       SecondPart: <span>em diferentes áreas do Direito</span>,
-      subtitle: 'Atendimento jurídico com ética, técnica e responsabilidade.',
+      subtitle: "Atendimento jurídico com ética, técnica e responsabilidade.",
       imgFeatures: imgFeatures,
-      alt: 'imagem representativa da Seção Serviços',
-      titleMessageFeature: '100%',
-      subtitleMessageFeature: 'compromisso profissional',
+      alt: "imagem representativa da Seção Serviços",
+      titleMessageFeature: "100%",
+      subtitleMessageFeature: "compromisso profissional",
       cards: {
         card1: {
-          title: 'Direito Trabalhista',
-          subtitle: 'Defesa técnica em questões e direitos trabalhistas.',
+          title: "Direito Trabalhista",
+          subtitle: "Defesa técnica em questões e direitos trabalhistas.",
           description: (
             <div>
               A_Definir
@@ -243,12 +249,12 @@ const content = {
             </div>
           ),
           icon: <Briefcase />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card2: {
-          title: 'Direito Cível',
-          subtitle: 'Assessoria em demandas cíveis e relações patrimoniais.',
+          title: "Direito Cível",
+          subtitle: "Assessoria em demandas cíveis e relações patrimoniais.",
           description: (
             <div>
               A_Definir
@@ -258,13 +264,13 @@ const content = {
             </div>
           ),
           icon: <User />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card3: {
-          title: 'Direito Previdenciário',
+          title: "Direito Previdenciário",
           subtitle:
-            'Assessoria em benefícios previdenciários e aposentadorias.',
+            "Assessoria em benefícios previdenciários e aposentadorias.",
           description: (
             <div>
               A_Definir <br />
@@ -273,12 +279,12 @@ const content = {
             </div>
           ),
           icon: <Scale />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card4: {
-          title: 'Direito Criminal',
-          subtitle: 'Defesa técnica em processos e investigações criminais.',
+          title: "Direito Criminal",
+          subtitle: "Defesa técnica em processos e investigações criminais.",
           description: (
             <div>
               A_Definir
@@ -288,12 +294,12 @@ const content = {
             </div>
           ),
           icon: <Gavel />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card5: {
-          title: 'Direito de Família e Sucessões',
-          subtitle: 'Assessoria em questões familiares e sucessórias.',
+          title: "Direito de Família e Sucessões",
+          subtitle: "Assessoria em questões familiares e sucessórias.",
           description: (
             <div>
               A_Definir
@@ -303,12 +309,12 @@ const content = {
             </div>
           ),
           icon: <Users />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card6: {
-          title: 'Consultoria Jurídica',
-          subtitle: 'Orientação jurídica preventiva e consultiva contínua.',
+          title: "Consultoria Jurídica",
+          subtitle: "Orientação jurídica preventiva e consultiva contínua.",
           description: (
             <div>
               A_Definir
@@ -318,54 +324,54 @@ const content = {
             </div>
           ),
           icon: <MessageSquare />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
       },
       moreFeatures: {
         card1: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
         card2: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
         card3: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
       },
-      ctaButtonText: 'Entrar em contato',
+      ctaButtonText: "Entrar em contato",
     },
     emergency: {
-      minitag: 'A_Definir',
-      title: 'A_Definir',
-      subtitle: 'A_Definir',
-      ctaButtonText: 'A_Definir',
+      minitag: "A_Definir",
+      title: "A_Definir",
+      subtitle: "A_Definir",
+      ctaButtonText: "A_Definir",
     },
     maps: {
-      minitag: 'A_Definir',
-      title: 'A_Definir',
-      subtitle: 'A_Definir',
-      embedsrc: 'A_Definir',
+      minitag: "A_Definir",
+      title: "A_Definir",
+      subtitle: "A_Definir",
+      embedsrc: "A_Definir",
     },
     about: {
       imagem: {
         img: aboutImg,
-        alt: 'Imagem ilustrativa da Seção Sobre',
+        alt: "Imagem ilustrativa da Seção Sobre",
       },
-      miniTag: 'QUEM ESTÁ POR TRÁS DO SEU DIREITO',
+      miniTag: "QUEM ESTÁ POR TRÁS DO SEU DIREITO",
       FirstPart: <span> Profissionais a serviço </span>,
       Destaque: <span className="italic font-light"> do Direito</span>,
       SecondPart: <span></span>,
 
-      SecondPartTitle: '',
+      SecondPartTitle: "",
       subtitle:
-        'Experiência jurídica construída com ética, técnica e compromisso profissional.',
+        "Experiência jurídica construída com ética, técnica e compromisso profissional.",
       paragraph: (
         <div>
           Nossa equipe é constituída por profissionais dedicados e experientes
@@ -384,7 +390,7 @@ const content = {
         </div>
       ),
 
-      buttonModalLabelAbout: 'Continuar lendo',
+      buttonModalLabelAbout: "Continuar lendo",
       modal: (
         <p className="font-secondFont">
           A_Definir
@@ -396,27 +402,27 @@ const content = {
           A_Definir
         </p>
       ),
-      paragraphModalCta: 'Entre em contato',
-      titleModal: 'A_Definir',
-      ctaButtonAriaLabel: 'Botão para entrar em contato',
-      ctaButtonText: 'Falar diretamente com o escritório',
+      paragraphModalCta: "Entre em contato",
+      titleModal: "A_Definir",
+      ctaButtonAriaLabel: "Botão para entrar em contato",
+      ctaButtonText: "Falar diretamente com o escritório",
       aboutSocial: {
         img: {
           img: aboutSocialImg,
           alt: `Foto do Instagram do ${infos.name}`,
-          altDefault: 'Imagem ilustrativa da Seção de Redes Sociais',
+          altDefault: "Imagem ilustrativa da Seção de Redes Sociais",
         },
-        miniTag: 'REDES SOCIAIS',
-        title: 'Conecte-se conosco',
+        miniTag: "REDES SOCIAIS",
+        title: "Conecte-se conosco",
         subtitle:
-          'Acompanhe nossas redes sociais para se manter informado sobre conteúdos jurídicos, atualizações e temas relevantes das áreas de atuação.',
+          "Acompanhe nossas redes sociais para se manter informado sobre conteúdos jurídicos, atualizações e temas relevantes das áreas de atuação.",
         paragraph: <p></p>,
-        labelInstagram: 'Siga-nos no Instagram',
-        labelFacebook: 'Siga-nos no Facebook',
-        labelLinkedin: 'Siga-nos no LinkedIn',
-        labelX: 'Siga-nos no X',
-        labelTiktok: 'Siga-nos no Tik Tok',
-        labelYoutube: 'Siga-nos no Youtube',
+        labelInstagram: "Siga-nos no Instagram",
+        labelFacebook: "Siga-nos no Facebook",
+        labelLinkedin: "Siga-nos no LinkedIn",
+        labelX: "Siga-nos no X",
+        labelTiktok: "Siga-nos no Tik Tok",
+        labelYoutube: "Siga-nos no Youtube",
       },
     },
     // team: {
@@ -444,45 +450,45 @@ const content = {
     //   },
     // },
     steps: {
-      miniTag: 'POR QUE CONTAR COM UM ADVOGADO',
+      miniTag: "POR QUE CONTAR COM UM ADVOGADO",
       FirstPart: <span> Segurança jurídica em </span>,
       Destaque: <span className="italic font-light"> cada decisão</span>,
       SecondPart: <span></span>,
 
       subtitle:
-        'Atuação profissional para orientar, prevenir riscos e conduzir demandas com responsabilidade',
+        "Atuação profissional para orientar, prevenir riscos e conduzir demandas com responsabilidade",
       img: imgSteps,
-      alt: 'Imagem ilustrativa da Seção Passo a Passo',
+      alt: "Imagem ilustrativa da Seção Passo a Passo",
       cards: {
         card1: {
           stepNumber: 1,
-          cardTitle: 'Evite erros que geram prejuízos',
+          cardTitle: "Evite erros que geram prejuízos",
           cardDescription:
-            'A falta de orientação jurídica adequada pode resultar em perdas financeiras, nulidades e decisões desfavoráveis. A atuação de um advogado contribui para a condução correta das questões legais.',
+            "A falta de orientação jurídica adequada pode resultar em perdas financeiras, nulidades e decisões desfavoráveis. A atuação de um advogado contribui para a condução correta das questões legais.",
         },
         card2: {
           stepNumber: 2,
-          cardTitle: 'Tenha clareza sobre seus direitos',
+          cardTitle: "Tenha clareza sobre seus direitos",
           cardDescription:
-            'O acompanhamento profissional permite compreender deveres, direitos e possibilidades jurídicas, auxiliando na tomada de decisões mais conscientes e fundamentadas.',
+            "O acompanhamento profissional permite compreender deveres, direitos e possibilidades jurídicas, auxiliando na tomada de decisões mais conscientes e fundamentadas.",
         },
         card3: {
           stepNumber: 3,
-          cardTitle: 'Atendimento técnico e individualizado',
+          cardTitle: "Atendimento técnico e individualizado",
           cardDescription:
-            'Cada caso possui particularidades que exigem análise cuidadosa. A assessoria jurídica adequada considera o contexto específico de cada situação apresentada.',
+            "Cada caso possui particularidades que exigem análise cuidadosa. A assessoria jurídica adequada considera o contexto específico de cada situação apresentada.",
         },
         card4: {
           stepNumber: 4,
-          cardTitle: 'Mais tranquilidade durante o processo',
+          cardTitle: "Mais tranquilidade durante o processo",
           cardDescription:
-            'Contar com um advogado proporciona maior segurança na condução de demandas jurídicas, reduzindo incertezas e garantindo acompanhamento técnico em todas as etapas.',
+            "Contar com um advogado proporciona maior segurança na condução de demandas jurídicas, reduzindo incertezas e garantindo acompanhamento técnico em todas as etapas.",
         },
       },
-      ctaButtonText: 'Entrar em contato agora',
+      ctaButtonText: "Entrar em contato agora",
     },
     ctaSecondary: {
-      miniTag: 'FALE CONOSCO',
+      miniTag: "FALE CONOSCO",
       title: <h1>Não espere mais pra garantir o que é seu</h1>,
       subtitle: (
         <div>
@@ -493,53 +499,53 @@ const content = {
         </div>
       ),
       // subtitleDireita: (
-      //   <p className="gap-3 flex font-mainFont opacity-60 mt-1">
+      //   <p className="flex gap-3 mt-1 font-mainFont opacity-60">
       //     <span>E N T R E </span> E M <span>C O N T A T O</span> V I A
       //   </p>
       // ),
       // titleDireita: (
-      //   <h1 className="text-title5 my-3 font-mainFont">WhatsApp</h1>
+      //   <h1 className="my-3 text-title5 font-mainFont">WhatsApp</h1>
       // ),
-      ctaButtonText: 'Fale com a gente agora mesmo',
+      ctaButtonText: "Fale com a gente agora mesmo",
       ctaButtonAriaLabel:
-        'Botão para chamada de ação para contato pelo whatsapp',
+        "Botão para chamada de ação para contato pelo whatsapp",
     },
     blog: {
-      miniTag: 'BLOG',
-      title: 'A_Definir',
-      subtitle: '',
+      miniTag: "BLOG",
+      title: "A_Definir",
+      subtitle: "",
       img: imgSteps,
-      labelCards: 'Ver mais',
-      label: 'Clique aqui para ver todas as matérias',
-      blogLink: 'mauromoncao.wordpress.com', //sem "https://"
+      labelCards: "Ver mais",
+      label: "Clique aqui para ver todas as matérias",
+      blogLink: "mauromoncao.wordpress.com", //sem "https://"
     },
     faq: {
-      miniTag: 'TIRE SUAS DÚVIDAS',
-      title: 'Perguntas Frequentes',
-      subtitle: 'Confira as perguntas abaixo para esclarecer suas dúvidas. ',
+      miniTag: "TIRE SUAS DÚVIDAS",
+      title: "Perguntas Frequentes",
+      subtitle: "Confira as perguntas abaixo para esclarecer suas dúvidas. ",
       questions: {
         question1: {
-          question: 'Como posso contratar seus serviços?',
+          question: "Como posso contratar seus serviços?",
           answer:
-            'Agende sua consulta conosco via WhatsApp e conversaremos sobre suas necessidades e avaliaremos os custos.',
+            "Agende sua consulta conosco via WhatsApp e conversaremos sobre suas necessidades e avaliaremos os custos.",
         },
         question2: {
-          question: 'Qual é o prazo médio para resolução de um caso?',
+          question: "Qual é o prazo médio para resolução de um caso?",
           answer:
-            'O prazo médio varia conforme a complexidade, mas discutiremos uma estimativa durante a consulta inicial.',
+            "O prazo médio varia conforme a complexidade, mas discutiremos uma estimativa durante a consulta inicial.",
         },
         question3: {
-          question: 'Quais documentos devo levar para a consulta?',
+          question: "Quais documentos devo levar para a consulta?",
           answer:
-            'Traga os documentos relevantes ao seu caso, como contratos, correspondências e registros, além de documentos pessoais e comprovante de residência.',
+            "Traga os documentos relevantes ao seu caso, como contratos, correspondências e registros, além de documentos pessoais e comprovante de residência.",
         },
         question4: {
-          question: 'Vocês oferecem serviços de consultoria preventiva?',
+          question: "Vocês oferecem serviços de consultoria preventiva?",
           answer:
-            'Sim, oferecemos consultoria preventiva para evitar problemas futuros e garantir conformidade legal.',
+            "Sim, oferecemos consultoria preventiva para evitar problemas futuros e garantir conformidade legal.",
         },
       },
-      paragraph: 'Clique aqui caso tenha mais dúvidas',
+      paragraph: "Clique aqui caso tenha mais dúvidas",
     },
     // team: {
     //   miniTag: 'A_Definir',
@@ -809,13 +815,13 @@ const content = {
     // },
     footer: {
       copyrightLine: ` ${currentYear} - ${infos.name} - Todos os direitos reservados`,
-      footerDivulgacaoText: 'Gostaria de ter um site como este? Clique aqui',
-      midSectionName: 'Até mais',
+      footerDivulgacaoText: "Gostaria de ter um site como este? Clique aqui",
+      midSectionName: "Até mais",
       footerText:
-        'Agradecemos sua visita! Esperamos que em breve você se torne nosso cliente e desfrute de todos os benefícios que oferecemos.',
-      footerSocialText: 'Siga a gente nas redes sociais:',
-      footerNavegacaoText: 'NAVEGAÇÃO',
-      desenvolvidoPor: 'Desenvolvido com excelência por Paper Street',
+        "Agradecemos sua visita! Esperamos que em breve você se torne nosso cliente e desfrute de todos os benefícios que oferecemos.",
+      footerSocialText: "Siga a gente nas redes sociais:",
+      footerNavegacaoText: "NAVEGAÇÃO",
+      desenvolvidoPor: "Desenvolvido com excelência por Paper Street",
       privacidade: (
         <div class="phone3:max-w-3xl mx-auto tablet1:px-6 text-gray-900 leading-relaxed font-secondFont">
           <h1 class="text-3xl font-bold mb-6">Política de Privacidade</h1>
@@ -841,7 +847,7 @@ const content = {
 
           <ul class="list-disc ml-6 mb-6 space-y-2">
             <li>
-              <strong>Autoridade Nacional de Proteção de Dados (ANPD):</strong>{' '}
+              <strong>Autoridade Nacional de Proteção de Dados (ANPD):</strong>{" "}
               órgão responsável pela fiscalização e aplicação da LGPD.
             </li>
 
@@ -1048,9 +1054,9 @@ const content = {
         </div>
       ),
       pontos: {
-        ponto1: 'Profissionalismo',
-        ponto2: 'Experiência',
-        ponto3: 'Resultados',
+        ponto1: "Profissionalismo",
+        ponto2: "Experiência",
+        ponto3: "Resultados",
       },
     },
     // socios: {
@@ -1122,8 +1128,8 @@ const content = {
       year: currentYear,
       footerexpediente: infos.expediente,
       obsFooter: infos.obs,
-      footerNavegacaoText: 'NAVEGAÇÃO',
-      footerDivulgacaoText: 'Gostaria de ter um site como este? Clique aqui',
+      footerNavegacaoText: "NAVEGAÇÃO",
+      footerDivulgacaoText: "Gostaria de ter um site como este? Clique aqui",
     },
     svgs: {
       wpp: (
@@ -1139,11 +1145,11 @@ const content = {
       ),
     },
   },
-}
+};
 
 export const abstractions = {
   titleModal: <strong>{content.texts.about.title}</strong>,
   subtitleModal: <strong>{content.texts.about.subtitle}</strong>,
-}
+};
 
-export default content
+export default content;
